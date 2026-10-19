@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Informasi Bencana Banjir</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>@view-transition { navigation: auto; }</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Knewave&display=swap" rel="stylesheet">
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigasi -->
+  <nav class="navbar">
+   <div class="container">
+    <img src="uploads/logobanjir.png" alt="" class="logo">
+    <div class="nav-brand">
+    Info Banjir
+    </div>
+    <ul class="nav-menu">
+     <li><a href="index.html" class="active">Beranda</a></li>
+     <li><a href="report.php">Lapor</a></li>
+     <li><a href="news.php">Berita</a></li>
+     <li><a href="admin_login.php">Admin</a></li>
+     <li><a href="info.html">Info</a></li>
+    </ul>
+   </div>
+  </nav><!-- Hero Section -->
+  <section class="hero">
+   <div class="container">
+    <h1>Sistem Informasi Bencana Banjir</h1>
+    <p>Platform pelaporan dan monitoring banjir untuk masyarakat Indonesia</p>
+    <div class="hero-buttons">
+        <a href="report.php" class="btn btn-primary">Laporkan Banjir</a>
+        <a href="info.html#maps" class="btn btn-secondary">Lihat Peta</a>
+    </div>
+   </div>
+  </section><!-- Statistik Ringkas -->
+  <section class="stats">
+   <div class="container">
+    <h2>Data Terkini</h2>
+    <div class="stats-grid">
+     <div class="stat-card">
+      <div class="stat-icon">
+       📊
+      </div>
+      <h3 id="total-reports">-</h3>
+      <p>Total Laporan</p>
+     </div>
+     <div class="stat-card">
+      <div class="stat-icon">
+       ⚠️
+      </div>
+      <h3 id="status-level">-</h3>
+      <p>Status Bahaya</p>
+     </div>
+     <div class="stat-card">
+      <div class="stat-icon">
+       📍
+      </div>
+      <h3 id="affected-areas">-</h3>
+      <p>Wilayah Terdampak</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Fitur Utama -->
+  <section class="features">
+   <div class="container">
+    <h2>Fitur Sistem</h2>
+    <div class="features-grid">
+     <div class="feature-card">
+      <div class="feature-icon">
+       📝
+      </div>
+      <h3>Pelaporan Mudah</h3>
+      <p>Laporkan kejadian banjir dengan formulir sederhana dan unggah foto bukti</p>
+     </div>
+     <div class="feature-card">
+      <div class="feature-icon">
+       📈
+      </div>
+      <h3>Analisis Data</h3>
+      <p>Sistem analisis otomatis untuk menentukan tingkat bahaya banjir</p>
+     </div>
+     <div class="feature-card">
+        <div class="feature-icon">📰</div>
+        <h3>Berita Terbaru</h3>
+        <p>Dapatkan informasi terkini seputar bencana banjir dari berbagai daerah di Indonesia.</p>
+    </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <p>© 2025 Sistem Informasi Bencana Banjir. Dibuat untuk kepentingan pendidikan.</p>
+   </div>
+  </footer>
+  <script>
+        // Fetch data statistik dari server
+        fetch('get_stats.php')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('total-reports').textContent = data.total || '0';
+                document.getElementById('status-level').textContent = data.status || 'Aman';
+                document.getElementById('affected-areas').textContent = data.areas || '0';
+            })
+            .catch(error => {
+                console.error('Error fetching stats:', error);
+            });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99bbe6c784a8df74',t:'MTc2MjY3NjUzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info & Peta - Sistem Informasi Bencana Banjir</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+    html { scroll-behavior: smooth; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Knewave&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <img src="uploads/logobanjir.png" alt="" class="logo">
+        <div class="nav-brand">Info Banjir</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="report.php">Lapor</a></li>
+            <li><a href="news.php">Berita</a></li>
+            <li><a href="admin_login.php">Admin</a></li>
+            <li><a href="info.html" class="active">Info</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="info-section">
+    <div class="container">
+        <h1>Informasi Bencana Banjir</h1>
+
+        <div class="info-content">
+
+            <div class="info-card">
+                <h2>Apa itu Banjir?</h2>
+                <p>Banjir merupakan suatu peristiwa meluapnya air ke daratan yang pada kondisi normal seharusnya tidak tergenang. Fenomena ini terjadi ketika volume air melebihi kapasitas tampung suatu wilayah, baik itu sungai, danau, waduk, maupun sistem drainase perkotaan. Banjir dapat terjadi secara cepat akibat curah hujan tinggi dalam waktu singkat, maupun secara perlahan karena akumulasi debit air yang terus meningkat. Dalam kajian hidrologi, banjir termasuk bencana alam yang memiliki siklus berulang, namun dampaknya dapat diperbesar oleh aktivitas manusia seperti pembangunan yang tidak teratur, alih fungsi lahan, dan kerusakan lingkungan. Di Indonesia, banjir menjadi bencana yang umum terjadi akibat letak geografis, iklim tropis dengan curah hujan tinggi, serta kondisi topografi yang beragam. Selain mengancam keselamatan jiwa, banjir juga mengganggu aktivitas sosial, ekonomi, dan keseharian masyarakat.</p>            
+            </div>
+
+            <div class="info-card">
+                <h2>Penyebab Banjir</h2>
+                <p>Penyebab banjir dapat dibagi menjadi dua faktor utama, yaitu faktor alami dan faktor aktivitas manusia. Faktor alami meliputi curah hujan tinggi, meluapnya sungai, pasang air laut (rob), dan kondisi tanah yang tidak mampu menyerap air dalam jumlah besar. Wilayah dataran rendah, daerah cekungan, dan pertemuan sungai lebih rentan mengalami banjir karena karakteristik topografi yang memudahkan air berkumpul. Sementara itu, faktor manusia sering menjadi penyebab utama meningkatnya risiko banjir. Pembukaan lahan secara besar-besaran, penggundulan hutan, pembangunan pemukiman di bantaran sungai, serta sistem drainase yang buruk membuat air tidak dapat mengalir dengan lancar. Kebiasaan membuang sampah sembarangan ke sungai dan selokan juga menjadi faktor yang memperparah keadaan, karena menyebabkan saluran air tersumbat. Perubahan tata ruang kota tanpa perhitungan lingkungan membuat penyerapan air hujan semakin kecil sehingga banjir menjadi lebih sering terjadi.</p>
+            </div>
+
+            <div class="info-card">
+                <h2>Dampak Banjir</h2>
+                <p>Dampak banjir dapat dirasakan secara luas oleh masyarakat, meliputi kerugian material maupun non-material. Dari segi fisik, banjir dapat merusak infrastruktur seperti rumah, jalan, jembatan, fasilitas listrik, serta sarana air bersih. Banyak barang-barang warga seperti perabotan dan kendaraan turut rusak sehingga menimbulkan kerugian ekonomi yang besar. Selain itu, banjir dapat mengganggu kegiatan ekonomi karena distribusi barang terhambat, tempat usaha tidak beroperasi, dan aktivitas perdagangan lumpuh. Dari sisi kesehatan, banjir meningkatkan risiko penyakit menular seperti diare, leptospirosis, infeksi kulit, dan ISPA akibat rusaknya sanitasi serta tergenangnya air dalam waktu lama. Pada aspek sosial, banjir menyebabkan pengungsian, terganggunya pendidikan karena sekolah ditutup, serta meningkatnya stres dan trauma pada korban. Dampak lingkungan juga tidak kalah penting, karena banjir dapat mengakibatkan erosi tanah, pencemaran air, serta kerusakan ekosistem setempat.</p>            
+            </div>
+
+            <div class="info-card">
+                <h2>Mitigasi Banjir</h2>
+                <strong>A. Mitigasi Pra Bencana</strong><br><br> 1. Menjaga kelestarian lingkungan, seperti melakukan penghijauan, menanam pohon, dan reboisasi untuk meningkatkan daya serap tanah. <br> 2. Membangun infrastruktur pengendali banjir seperti tanggul, embung, waduk, kanal, dan sistem drainase yang memadai. <br> 3. Normalisasi sungai dan pembersihan drainase secara rutin untuk memastikan aliran air tetap lancar. <br> 4. Menghindari pembangunan pemukiman di daerah rawan banjir terutama bantaran sungai atau wilayah cekungan. <br> 5. Meningkatkan edukasi masyarakat mengenai tanda-tanda banjir, jalur evakuasi, dan pentingnya tidak membuang sampah sembarangan. <br> <br><br> <strong>B. Mitigasi Saat Bencana</strong> <br><br> 1. Mengikuti informasi resmi dari pemerintah atau lembaga terkait mengenai situasi banjir dan arahan evakuasi. <br> 2. Mematikan listrik dan mengamankan barang penting ke tempat yang lebih tinggi. <br> 3. Melakukan evakuasi ke lokasi aman secara tertib, terutama memperhatikan anak-anak, lansia, dan ibu hamil. <br> 4. Menghindari area berarus deras serta tidak menyentuh kabel listrik atau benda berbahaya di area banjir. <br> 5. Memastikan komunikasi tetap berjalan, baik antarwarga maupun dengan petugas penyelamat, untuk memperbarui kondisi lingkungan. <br><br> <strong>C. Mitigasi Pasca Bencana</strong> <br><br> 1. Membersihkan rumah dan lingkungan, termasuk lumpur, sampah, dan air kotor yang tertinggal. <br> 2. Pendataan kerusakan dan perbaikan fasilitas umum oleh pemerintah serta pemberian bantuan perbaikan bagi warga terdampak. <br> 3. Pemeriksaan kesehatan untuk mencegah penyakit pasca banjir, seperti diare, infeksi, dan leptospirosis. <br> 4. Memastikan ketersediaan air bersih dan perbaikan sanitasi dengan membersihkan sumur, mensterilkan air, dan menjaga kebersihan pangan. <br> 5. Menyemprot disinfektan serta memeriksa makanan yang tersisa agar tidak menimbulkan penyakit.
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MAP SECTION -->
+<section id="maps" class="map-section">
+    <div class="container">
+        <h2>Peta Persebaran Banjir</h2>
+        <p>Peta interaktif menampilkan lokasi rawan banjir dan laporan banjir dari masyarakat</p>
+
+        <div class="map-legend">
+
+            <div class="legend-item">
+                <img src="uploads/merah.jpg" style="width:24px; height:24px; border-radius:4px;">
+                <span>Lokasi Rawan Banjir</span>
+            </div>
+
+            <div class="legend-item">
+                <img src="uploads/biru.jpg" style="width:24px; height:24px; border-radius:4px;">
+                <span>Laporan Banjir</span>
+            </div>
+
+            <div class="legend-item">
+                <img src="uploads/posisi.jpg" style="width:24px; height:24px; border-radius:4px;">
+                <span>Lokasi Anda</span>
+            </div>
+
+        </div>
+
+        <div id="map"></div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Sistem Informasi Bencana Banjir. Dibuat untuk kepentingan pendidikan.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+
+var map = L.map('map').setView([-2.5489, 118.0149], 5);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+
+const iconLaporan = L.icon({
+    iconUrl: 'uploads/biru.jpg',
+    iconSize: [32, 32]
+});
+
+fetch('get_locations.php')
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(loc => {
+
+            if (loc.latitude && loc.longitude) {
+                L.marker([loc.latitude, loc.longitude], { icon: iconLaporan })
+                    .addTo(map)
+                    .bindPopup(`
+                        <b>${loc.lokasi}</b><br>
+                        Pelapor: ${loc.nama}<br>
+                        Tanggal: ${loc.tanggal}<br>
+                        Waktu: ${loc.waktu}<br>
+                        ${loc.deskripsi}
+                    `);
+            }
+
+        });
+    });
+
+
+
+const rawanIcon = L.icon({
+    iconUrl: 'uploads/merah.jpg',
+    iconSize: [32, 32]
+});
+
+const userIcon = L.icon({
+    iconUrl: 'uploads/posisi.jpg',
+    iconSize: [40, 40]
+});
+
+
+//AMBIL DATA LAPORAN BANJIR
+fetch("get_locations.php")
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(loc => {
+            if (loc.latitude && loc.longitude) {
+                L.marker([loc.latitude, loc.longitude], { icon: floodIcon })
+                    .addTo(map)
+                    .bindPopup(`
+                        <h3>${loc.lokasi}</h3>
+                        <p><strong>Pelapor:</strong> ${loc.nama}</p>
+                        <p><strong>Tanggal:</strong> ${loc.tanggal}</p>
+                        <p>${loc.deskripsi.substring(0, 100)}...</p>
+                    `);
+            }
+        });
+    });
+
+fetch("get_peta.php")
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(loc => {
+            L.marker([loc.latitude, loc.longitude], { icon: rawanIcon })
+                .addTo(map)
+                .bindPopup(`<b>${loc.name}</b><br>Level: ${loc.level}`);
+        });
+    });
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+
+        L.marker([lat, lng], { icon: userIcon })
+            .addTo(map)
+            .bindPopup("Anda berada di sini")
+            .openPopup();
+    });
+}
+</script>
+
+</body>
+</html>
